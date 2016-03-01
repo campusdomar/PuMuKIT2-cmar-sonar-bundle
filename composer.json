@@ -1,5 +1,5 @@
 {
-    "name": "campusdomar/pmk2-cmar-sonal-bundle",
+    "name": "campusdomar/pmk2-cmar-sonar-bundle",
     "type": "symfony-bundle",
     "description": "CMAR SonarBundle.",
     "keywords": [
