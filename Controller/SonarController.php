@@ -17,13 +17,14 @@ class SonarController extends Controller
      */
     public function indexAction()
     {
-      $filter = $this->get('doctrine_mongodb.odm.document_manager')->getFilterCollection()->enable("channel");
-      $filter->setParameter("channel_tag", "CHSONAR");
+        $filter = $this->get('doctrine_mongodb.odm.document_manager')->getFilterCollection()->enable('channel');
+        $filter->setParameter('channel_tag', 'CHSONAR');
 
-      $breadcrumbs = $this->get('pumukit_web_tv.breadcrumbs');
-      $breadcrumbs->addList("Sonar", "sonar");
-      return array();
-    }  
+        $breadcrumbs = $this->get('pumukit_web_tv.breadcrumbs');
+        $breadcrumbs->addList('Sonar', 'sonar');
+
+        return array();
+    }
 
     /**
      * @Route("/procesosignado", name="sonar_procesosignado")
@@ -31,11 +32,12 @@ class SonarController extends Controller
      */
     public function procesosignadoAction()
     {
-      $breadcrumbs = $this->get('pumukit_web_tv.breadcrumbs');
-      $breadcrumbs->addList("Sonar", "sonar");
-      $breadcrumbs->add("The process of signing", "sonar_procesosignado");
-      return array();
-    }  
+        $breadcrumbs = $this->get('pumukit_web_tv.breadcrumbs');
+        $breadcrumbs->addList('Sonar', 'sonar');
+        $breadcrumbs->add('The process of signing', 'sonar_procesosignado');
+
+        return array();
+    }
 
     /**
      * @Route("/sonar", name="sonar_sonar")
@@ -43,9 +45,10 @@ class SonarController extends Controller
      */
     public function sonarAction()
     {
-      $breadcrumbs = $this->get('pumukit_web_tv.breadcrumbs');
-      $breadcrumbs->addList("Sonar", "sonar");
-      $breadcrumbs->add("What is sonar?", "sonar_sonar");    
-      return array();
+        $breadcrumbs = $this->get('pumukit_web_tv.breadcrumbs');
+        $breadcrumbs->addList('Sonar', 'sonar');
+        $breadcrumbs->add('What is sonar?', 'sonar_sonar');
+
+        return array();
     }
 }
